@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+RetailPulse – GeoAI Footfall Forecasting & Retail Insights
+Project Overview
 
-## Project info
+RetailPulse is a GeoAI-powered analytics platform that helps retail businesses predict hourly customer footfall, visualize geospatial hotspots around their stores, and make data-driven decisions. The system leverages historical footfall data, location intelligence, and time-based trends to provide actionable insights on staffing, promotions, and resource allocation.
 
-**URL**: https://lovable.dev/projects/a55544dc-212e-4b2e-a9eb-27b4721ccc6d
+It includes a clean, interactive dashboard with CSV upload support, analytics visualization, heatmaps, forecasting, and automated PDF report generation.
 
-## How can I edit this code?
+Features
 
-There are several ways of editing your application.
+CSV Data Upload: Users can upload footfall data (timestamp, footfall count, latitude, longitude). The platform works with default demo data if no file is uploaded.
 
-**Use Lovable**
+Footfall Forecasting: Predicts hourly footfall using lightweight AI techniques like moving averages or linear regression. Optional use of Prophet for advanced forecasting.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a55544dc-212e-4b2e-a9eb-27b4721ccc6d) and start prompting.
+Analytics Dashboard: Interactive KPIs and charts showing total footfall, peak hours, daily trends, and heatmaps for weekly/hourly patterns.
 
-Changes made via Lovable will be committed automatically to this repo.
+GeoAI Heatmaps: Visualizes customer density around the store using uploaded geolocation data, highlighting high-traffic areas.
 
-**Use your preferred IDE**
+Recommendations Engine: Suggests optimal staffing levels, best promotion times, and location-based business insights.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+PDF Report Generation: Automatically generates a downloadable report containing KPIs, charts, forecast tables, and actionable recommendations.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Demo / Screenshots
 
-Follow these steps:
+Include screenshots of your dashboard, heatmaps, and forecast charts here.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Getting Started
+Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Python 3.x
 
-# Step 3: Install the necessary dependencies.
-npm i
+Node.js (optional, for frontend enhancements)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Streamlit or FastAPI for UI (if using Python)
 
-**Edit a file directly in GitHub**
+Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Clone the repository:
 
-**Use GitHub Codespaces**
+git clone https://github.com/yourusername/retailpulse.git
+cd retailpulse
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+Install dependencies:
 
-This project is built with:
+pip install -r requirements.txt
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+Run the app (Streamlit example):
 
-Simply open [Lovable](https://lovable.dev/projects/a55544dc-212e-4b2e-a9eb-27b4721ccc6d) and click on Share -> Publish.
+streamlit run app.py
 
-## Can I connect a custom domain to my Lovable project?
+Template CSV
 
-Yes, you can!
+The app accepts a CSV with the following format:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+timestamp,footfall,latitude,longitude
+2025-11-22 09:00,5,19.0760,72.8777
+2025-11-22 10:00,8,19.0760,72.8777
+2025-11-22 11:00,12,19.0760,72.8777
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+timestamp: Date and hour
+
+footfall: Number of customers
+
+latitude / longitude: Optional for heatmap visualization
+
+Tech Stack / Tools
+
+Backend / AI: Python, Pandas, NumPy, Scikit-learn, Prophet (optional)
+
+Frontend / Dashboard: Streamlit / FastAPI, HTML/CSS, JavaScript
+
+Visualization: Chart.js, Matplotlib, Seaborn, Leaflet.js
+
+PDF Reports: jsPDF / Python PDF libraries
+
+Version Control: GitHub
+
+Skills Demonstrated
+
+Time-series forecasting
+
+GeoAI & geospatial mapping
+
+Data visualization & dashboards
+
+CSV data processing and validation
+
+Rule-based recommendation systems
+
+PDF report automation
+
+Full-stack application development
+
+Usage
+
+Open the app in your browser.
+
+Upload your shop’s footfall CSV (optional).
+
+Explore the analytics dashboard and heatmaps.
+
+View hourly forecasts and AI-driven recommendations.
+
+Download the PDF report for offline insights.
+
+Future Improvements
+
+Integrate real-time POS or IoT footfall data
+
+Implement advanced ML models (LightGBM, XGBoost) for improved predictions
+
+Add multi-store support with comparative analytics
+
+Real-time alerts for peak crowd hours
